@@ -1,5 +1,18 @@
-#include <string>
+#include "oops.hpp"
 
-std::string oops() {
-   return "You can delete this function and put your code in this file!";
+#include <iostream>
+
+int tryAgain(int lowerBound, int upperBound, std::string prompt, std::string errorMsg)
+{
+    int val;
+    std::cout << prompt << "\n";
+    std::cin >> val;
+    while (val < lowerBound || val > upperBound)
+    {
+        std::cout << errorMsg << "\n";
+        std::cout << prompt << "\n";
+        std::cin >> val;
+    }
+
+    return val;
 }

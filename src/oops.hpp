@@ -2,4 +2,4 @@
 
 #include <string>
 
-std::string oops();
+int tryAgain(int lowerBound, int upperBound, std::string prompt, std::string errorMsg);
